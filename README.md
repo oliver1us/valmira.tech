@@ -2,7 +2,7 @@
 
 Blog técnico en español e inglés, generado con Hugo **0.170.1** y PaperMod.
 
-[Estado y próximas fases](PLAN.md) · [Cómo publicar en Cloudflare Pages](instrucions.md)
+[Estado y próximas fases](PLAN.md) · [Cómo publicar en Cloudflare](instrucions.md)
 
 ## Desarrollo local
 

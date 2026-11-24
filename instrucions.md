@@ -1,6 +1,23 @@
-# Publicar Valmira en Cloudflare Pages
+# Publicar Valmira en Cloudflare
 
-El primer despliegue tiene tres pasos: subir el sitio a GitHub, conectarlo a Pages y asociar el dominio. Para cambios posteriores basta con publicar en `main`.
+## Workers Builds (panel con «Deploy command»)
+
+En **Settings → Build**, configura el Worker conectado a `main`:
+
+| Ajuste | Valor |
+|---|---|
+| Root directory | `/` (raíz del repositorio, donde están `hugo.toml` y `wrangler.toml`) |
+| Build command | `hugo --gc --minify` |
+| Deploy command | `npx wrangler deploy` |
+| Build variable | `HUGO_VERSION=0.170.1` |
+
+Wrangler publica los archivos de `public/` según `wrangler.toml`. Comprueba que `name` en ese archivo coincide con el nombre del **Worker** en el panel. Si el token de build figura como eliminado, revocado o de otro miembro, usa **Create new token** en la configuración del build y guarda el token seleccionado allí.
+
+Una vez subido `wrangler.toml` a `main`, vuelve a desplegar y comprueba `/es/` y `/en/` en la URL del Worker. Para servir `valmira.tech`, añádelo al Worker en **Settings → Domains & Routes → Add → Custom Domain**.
+
+## Cloudflare Pages (proyecto con «Build output directory»)
+
+Si tu proyecto es de Pages, sigue estos pasos:
 
 ## 1. Preparar y subir el sitio
 
