@@ -1,0 +1,51 @@
+baseURL = "https://valmira.tech/"
+title = "Valmira"
+defaultContentLanguage = "es"
+defaultContentLanguageInSubdir = true
+theme = "PaperMod"
+enableRobotsTXT = true
+
+[languages.es]
+  locale = "es"
+  label = "Español"
+  weight = 1
+  [languages.es.params]
+    description = "Guías y notas de laboratorio sobre DevOps, Kubernetes y plataformas."
+
+[languages.en]
+  locale = "en"
+  label = "English"
+  weight = 2
+  [languages.en.params]
+    description = "Guides and lab notes on DevOps, Kubernetes, and platform engineering."
+
+[taxonomies]
+  tag = "tags"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[params]
+  mainSections = ["posts"]
+  showReadingTime = true
+
+[[languages.es.menus.main]]
+  name = "Blog"
+  pageRef = "/posts"
+  weight = 10
+
+[[languages.es.menus.main]]
+  name = "Sobre Valmira"
+  pageRef = "/sobre"
+  weight = 20
+
+[[languages.en.menus.main]]
+  name = "Blog"
+  pageRef = "/posts"
+  weight = 10
+
+[[languages.en.menus.main]]
+  name = "About Valmira"
+  pageRef = "/sobre"
+  weight = 20
